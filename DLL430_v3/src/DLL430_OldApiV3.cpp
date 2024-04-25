@@ -330,7 +330,7 @@ bool DLL430_OldApiV3::loadDeviceDb(const char* file)
 	catch (const std::runtime_error& e)
 	{
 #ifndef NDEBUG
-		ofstream("xml_error.log") << e.what() << endl;
+        std::ofstream("xml_error.log") << e.what() << endl;
 #endif
 		log(LogTarget::ERR, DEVICE_DB_ERR, e.what());
 		return false;
@@ -356,7 +356,7 @@ bool DLL430_OldApiV3::DumpDeviceDb(const char* file)
 	catch (const std::runtime_error& e)
 	{
 #ifndef NDEBUG
-		ofstream("xml_error.log") << e.what() << endl;
+        std::ofstream("xml_error.log") << e.what() << endl;
 #endif
 		log(LogTarget::ERR, DEVICE_DB_ERR, e.what());
 		return false;
